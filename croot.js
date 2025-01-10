@@ -28,7 +28,7 @@ function ubahHeader(){
     document.getElementById("halo").innerHTML=getHash();
 }
 
-renderHTML('content','content/main.html');
+// renderHTML('content','content/main.html');
 
 
 document.addEventListener("scroll", function () {

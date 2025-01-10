@@ -5,13 +5,16 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 0 20px;
-    overflow-x: hidden; /* Hindari scroll horizontal */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 60px; /* To ensure footer does not overlap content */
 }
-
 /* Header Styling */
 .header {
     position: fixed;
