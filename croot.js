@@ -28,6 +28,9 @@ function pilihanMenu(){
         console.log("panduan ini bang")
         renderHTML('panduan', 'content/panduan.html');
     }
+    if (hashpath==="layanan"){
+        renderHTML('content','content/layanan.html');
+    }
 }
 
 function ubahHeader(){
