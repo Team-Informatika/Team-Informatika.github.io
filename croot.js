@@ -12,7 +12,7 @@ function pilihanMenu(){
     console.log(getHash());
     const hashpath=getHash();
     if (hashpath==="main"){
-        console.log("ini kedetek main")
+        console.log("ini kedetek main");
         renderHTML('content','content/main.html');
     }
     if (hashpath==="about"){
@@ -27,6 +27,9 @@ function pilihanMenu(){
     if (hashpath==="panduan"){
         console.log("panduan ini bang");
         renderHTML('panduan', 'content/panduan.html');
+    }
+    if (hashpath==="layanan"){
+        renderHTML('content','content/layanan.html');
     }
 }
 

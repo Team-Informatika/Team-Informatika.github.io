@@ -1,5 +1,5 @@
 <body>
-    <h1 class="h1">Apa itu Teknik informatika?</h1>
+    <h1 class="h1" id="h1">Apa itu Teknik informatika?</h1>
     <ul>
         <li>PENGERTIAN</li>
         <P>Teknik Informatika adalah bidang studi yang mempelajari pengembangan, implementasi, dan pengelolaan sistem berbasis teknologi informasi, termasuk perangkat lunak (software), perangkat keras (hardware), dan jaringan komputer.</P>
@@ -33,13 +33,13 @@
             </P>
     </ul>
     <img src="image/ss (2).jpg" alt="">
-    <header>
+    <header id="header">
         <input type="checkbox" id="toggler">
         <label for="toggler" class="fas fa-bars"></label>
         
-        <a href="#" class="logo">Informatika</a>
+        <a href="#" class="logo" id="logo">Teknik Informatika</a>
     
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <a href="#">home</a>
             <a href="#about">About</a>
             <a href="#produk">Product</a>
@@ -47,7 +47,7 @@
             <a href="#contact">contact</a>
         </nav>
     
-        <div class="icons">
+        <div class="icons" id="icons">
             <a href="#" class="fas fa-heart"></a>
             <a href="#" class="fas fa-shopping-cart"></a>
             <a href="#" class="fas fa-user"></a> 
@@ -69,12 +69,12 @@ flex: 1 1 40rem;
 position: relative; 
 }
 
-h1{
+#h1{
 text-align: center;
 margin-top: 10rem;
 }
 
-header{
+#header{
     position: fixed;
     top: 0;
     left: 0;
@@ -87,36 +87,36 @@ header{
     z-index: 1000;
     box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
 }
-header .logo{
+#header .logo{
     font-size: 3rem;
     color: #333
 
 }
-header .logo span{
+#header .logo span{
     color: #ff6a00
 
 }
-header .navbar a{
+#header #navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
     color: #666;
 }
-header .navbar a:hover{
+#header #navbar a:hover{
     color: #000000
 }
-header .icons a{
+#header #icons a{
     font-size: 2.5rem;
     color: #333;
     margin-left: 1.5rem;
 }
-header .icons a:hover{
+#header #icons a:hover{
     color: #ff6a00;
 }
 
-header #toggler{
+#header #toggler{
     display: none;
 }
-header .fa-bars{
+#header .fa-bars{
     font-size: 3rem;
     color: #333;
     border-radius: .5rem;
