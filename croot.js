@@ -20,12 +20,12 @@ function pilihanMenu(){
     }
 
     if (hashpath==="team"){
-        console.log("ini team nya masuk cok")
+        console.log("ini team nya masuk cok");
         renderHTML('content','content/team.html');
     }
 
     if (hashpath==="panduan"){
-        console.log("panduan ini bang")
+        console.log("panduan ini bang");
         renderHTML('panduan', 'content/panduan.html');
     }
 }
