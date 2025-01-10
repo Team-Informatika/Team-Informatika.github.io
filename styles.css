@@ -1,0 +1,85 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0 20px;
+    overflow-x: hidden; /* Hindari scroll horizontal */
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0); /* Transparan awal */
+    color: white;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out; /* Animasi transisi */
+}
+
+/* Header Saat Scroll */
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.7); /* Abu transparan */
+}
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #ddd;
+}
+
+/* Menu Icons */
+.menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-icons i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-icons i:hover {
+    color: #007BFF;
+}
+
+/* Content Styling */
+.content {
+    margin-top: 80px; /* Beri jarak agar konten tidak tertimpa header */
+    padding: 0 20px; /* Jarak kiri dan kanan */
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.content p {
+    margin-bottom: 15px;
+    color: #333;
+}
