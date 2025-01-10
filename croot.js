@@ -17,6 +17,10 @@ function pilihanMenu(){
     if (hashpath==="about"){
         renderHTML('content','content/about.html');
     }
+
+    if (hashpath==="team"){
+        renderHTML('content','content/team.html');
+    }
 }
 
 function ubahHeader(){
