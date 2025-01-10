@@ -7,12 +7,6 @@ onHashChange(pilihanMenu);
 //document.getElementById("content").innerHTML="<h1>ini adalah isi dari konten</h1>";
 onClick("halo",ubahHeader);
 
-//about ke navbar
-function pilih(){
-    const hashpath=getHash()
-}
-
-
 
 function pilihanMenu(){
     console.log(getHash());
