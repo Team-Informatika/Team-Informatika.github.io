@@ -17,6 +17,11 @@ function pilihanMenu(){
     if (hashpath==="about"){
         renderHTML('content','content/about.html');
     }
+
+    if (hashpath==="team"){
+        console.log("ini team nya masuk cok")
+        renderHTML('content','content/team.html');
+    }
 }
 
 function ubahHeader(){
