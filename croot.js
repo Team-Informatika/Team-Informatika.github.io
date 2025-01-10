@@ -19,6 +19,7 @@ function pilihanMenu(){
     }
 
     if (hashpath==="team"){
+        console.log("ini team nya masuk cok")
         renderHTML('content','content/team.html');
     }
 }
