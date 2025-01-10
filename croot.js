@@ -18,13 +18,18 @@ function pilihanMenu(){
     if (hashpath==="about"){
         renderHTML('content','content/about.html');
     }
+
+    if (hashpath==="team"){
+        console.log("ini team nya masuk cok")
+        renderHTML('content','content/team.html');
+    }
 }
 
 function ubahHeader(){
     document.getElementById("halo").innerHTML=getHash();
 }
 
-renderHTML('content','content/main.html');
+// renderHTML('content','content/main.html');
 
 
 document.addEventListener("scroll", function () {
