@@ -23,6 +23,11 @@ function pilihanMenu(){
         console.log("ini team nya masuk cok")
         renderHTML('content','content/team.html');
     }
+
+    if (hashpath==="panduan"){
+        console.log("panduan ini bang")
+        renderHTML('panduan', 'content/panduan.html');
+    }
 }
 
 function ubahHeader(){
