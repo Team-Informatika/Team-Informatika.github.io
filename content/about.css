@@ -1,97 +1,16 @@
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.about {
+  padding: 50px 20px;
+  background-color: #fff;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+.kepala {
+  font-size: 2.5em;
+  margin-bottom: 20px;
   color: #333;
-  background-color: #f9f9f9;
 }
 
-.section-about {
-  padding: 2rem 1rem;
-}
-
-.about-head {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.about-head h1 {
-  font-size: 2rem;
-  color: #444;
-  margin-bottom: 1rem;
-}
-
-.about-body {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
-}
-
-.about-body p {
-  margin-bottom: 1.5rem;
-  color: #555;
-  line-height: 1.8;
-}
-
-/* Footer Styles */
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #666;
-  font-size: 0.8rem;
-  transition: color 0.3s ease;
-}
-
-.menu-item i {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-}
-
-.menu-item:hover {
-  color: #007bff;
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
-  .about-head h1 {
-    font-size: 1.8rem;
-  }
-
-  .about-body p {
-    font-size: 1rem;
-  }
-
-  .menu-item {
-    margin: 0.5rem 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-head h1 {
-    font-size: 1.5rem;
-  }
-
-  .about-body p {
-    font-size: 0.9rem;
-  }
-
-  .footer-menu {
-    padding: 1rem;
-  }
-
-  .menu-item i {
-    font-size: 1rem;
-  }
-
-  .menu-item span {
-    font-size: 0.7rem;
+  .judul {
+      font-size: 2em;
   }
 }
