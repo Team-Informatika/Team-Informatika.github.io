@@ -28,7 +28,7 @@ body {
     background: rgba(0, 0, 0, 0); /* Transparan awal */
     color: white;
     z-index: 1000;
-    transition: background 0.3s ease-in-out; /* Animasi transisi */
+    transition: 0.3s ease-in-out; /* Animasi transisi */
 }
 
 /* Header Saat Scroll */
@@ -131,7 +131,6 @@ body {
     #h1{
     text-align: center;
     margin-top: 10rem;
-    margin-top: 250px;
     }
     
     #kepala{
@@ -146,7 +145,6 @@ body {
         justify-content: space-between;
         z-index: 1000;
         box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
-        text-decoration: none;
     }
     #kepala .logo{
         font-size: 3rem;
@@ -185,8 +183,4 @@ body {
         cursor: pointer;
         border: .1rem solid rgba(0, 0, 0, 0.3);
         display: none;
-    }
-
-    #icons{
-        display: flex;
     }
