@@ -146,15 +146,12 @@ body {
         z-index: 1000;
         box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
     }
-    #kepala .logo{
+    #kepala .bran{
         font-size: 3rem;
-        color: #333
+        color: #ff1313
     
     }
-    #kepala .logo span{
-        color: #ff6a00
     
-    }
     #kepala #navbar a{
         font-size: 2rem;
         padding: 0 1.5rem;
@@ -183,4 +180,8 @@ body {
         cursor: pointer;
         border: .1rem solid rgba(0, 0, 0, 0.3);
         display: none;
+    }
+
+    #icons{
+        display: flex;
     }
