@@ -133,7 +133,7 @@ body {
     margin-top: 10rem;
     }
     
-    #header{
+    #kepala{
         position: fixed;
         top: 0;
         left: 0;
@@ -146,36 +146,36 @@ body {
         z-index: 1000;
         box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
     }
-    #header .logo{
+    #kepala .logo{
         font-size: 3rem;
         color: #333
     
     }
-    #header .logo span{
+    #kepala .logo span{
         color: #ff6a00
     
     }
-    #header #navbar a{
+    #kepala #navbar a{
         font-size: 2rem;
         padding: 0 1.5rem;
         color: #666;
     }
-    #header #navbar a:hover{
+    #kepala #navbar a:hover{
         color: #000000
     }
-    #header #icons a{
+    #kepala #icons a{
         font-size: 2.5rem;
         color: #333;
         margin-left: 1.5rem;
     }
-    #header #icons a:hover{
+    #kepala #icons a:hover{
         color: #ff6a00;
     }
     
-    #header #toggler{
+    #kepala #toggler{
         display: none;
     }
-    #header .fa-bars{
+    #kepala .fa-bars{
         font-size: 3rem;
         color: #333;
         border-radius: .5rem;
