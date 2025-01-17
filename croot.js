@@ -16,6 +16,7 @@ function pilihanMenu(){
         renderHTML('content','content/main.html');
     }
     if (hashpath==="about"){
+        console.log("ini kedetek about");
         renderHTML('content','content/about.html');
     }
 
