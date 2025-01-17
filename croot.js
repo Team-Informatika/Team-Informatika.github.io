@@ -55,7 +55,7 @@ function responseFunctionLayanan(data){//{ status, data: parsedResult }
 
         // Membuat elemen icon
         const icon = document.createElement('i');
-        icon.classList.add('icon');
+        icon.classList.add('icon');//ini untuk menambahkan class di tag tersebut
         icon.textContent = item.icon;
 
         // Membuat elemen judul
