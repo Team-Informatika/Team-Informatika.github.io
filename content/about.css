@@ -1,84 +1,55 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global Styles */
-.section-about {
-  margin: 0;
+body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-}
-
-/* header { 
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-} */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-}
-
-.navbar-nav {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-item {
-  margin: 0 0.5rem;
-}
-
-.nav-link {
-  text-decoration: none;
   color: #333;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  background-color: #f9f9f9;
 }
 
-.nav-link:hover {
-  color: #007bff;
+.section-about {
+  padding: 2rem 1rem;
 }
 
-/* Main Section */
 .about-head {
-  padding: 2rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .about-head h1 {
   font-size: 2rem;
   color: #444;
+  margin-bottom: 1rem;
 }
 
-.about-head p {
-  font-size: 1rem;
+.about-body {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.about-body p {
   margin-bottom: 1.5rem;
   color: #555;
   line-height: 1.8;
 }
 
 /* Footer Styles */
-.footer {
+.footer-menu {
   position: fixed;
   bottom: 0;
   width: 100%;
   background: #f8f9fa;
   border-top: 1px solid #ddd;
-  padding: 0.5rem 0;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.footer-menu {
   display: flex;
   justify-content: space-around;
+  padding: 0.5rem 0;
 }
 
 .menu-item {
@@ -88,6 +59,7 @@
   text-decoration: none;
   color: #666;
   font-size: 0.8rem;
+  transition: color 0.3s ease;
 }
 
 .menu-item i {
@@ -101,59 +73,43 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .navbar-nav {
-    flex-direction: column;
-    text-align: center;
+  .about-head h1 {
+    font-size: 1.8rem;
   }
 
-  .nav-item {
-    margin: 0.5rem 0;
-  }
-
-  main h1 {
-    font-size: 1.5rem;
-  }
-
-  main p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar-toggler {
-    display: block;
-    border: none;
-    background: none;
-  }
-
-  .navbar-collapse {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    padding: 1rem;
-  }
-
-  .navbar-collapse.show {
-    display: flex;
-  }
-
-  .navbar-toggler span {
-    font-size: 1.5rem;
-  }
-
-  main h1 {
-    font-size: 1.2rem;
-  }
-
-  main p {
-    font-size: 0.8rem;
+  .about-body p {
+    font-size: 1rem;
   }
 
   .footer-menu {
+    flex-direction: column;
     align-items: center;
+    padding: 1rem 0;
   }
 
   .menu-item {
     margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-head h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-body p {
+    font-size: 0.9rem;
+  }
+
+  .footer-menu {
+    padding: 1rem;
+  }
+
+  .menu-item i {
+    font-size: 1rem;
+  }
+
+  .menu-item span {
+    font-size: 0.7rem;
   }
 }
