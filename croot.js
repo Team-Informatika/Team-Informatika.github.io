@@ -39,6 +39,36 @@ function pilihanMenu(){
 
 function responseFunctionLayanan(response){//{ status, data: parsedResult }
     console.log(response);
+    const data=response.data;
+    const container = document.getElementById('layanan-list');
+    // Melakukan perulangan untuk setiap item dalam data
+    data.forEach(item => {
+        // Membuat elemen div untuk setiap item
+        const layananItem = document.createElement('div');
+        layananItem.classList.add('layanan-item');
+
+        // Membuat elemen icon
+        const icon = document.createElement('i');
+        icon.classList.add('icon');
+        icon.textContent = item.icon;
+
+        // Membuat elemen judul
+        const judul = document.createElement('h2');
+        judul.textContent = item.judul;
+
+        // Membuat elemen deskripsi
+        const deskripsi = document.createElement('p');
+        deskripsi.textContent = item.deskripsi;
+
+        // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
+        layananItem.appendChild(icon);
+        layananItem.appendChild(judul);
+        layananItem.appendChild(deskripsi);
+
+        // Menambahkan layananItem ke container
+        container.appendChild(layananItem);
+    });
+
 }
 
 function ubahHeader(){
