@@ -25,8 +25,8 @@ function pilihanMenu(){
     }
 
     if (hashpath==="panduan"){
-        console.log("panduan ini bang");
-        renderHTML('panduan', 'content/panduan.html');
+        console.log("ini team nya masuk cok");
+        renderHTML('content','content/panduan.html');
     }
     if (hashpath==="layanan"){
         console.log("layanan disini ya boss");
