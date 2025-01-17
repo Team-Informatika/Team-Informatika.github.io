@@ -28,7 +28,7 @@ body {
     background: rgba(0, 0, 0, 0); /* Transparan awal */
     color: white;
     z-index: 1000;
-    transition: background 0.3s ease-in-out; /* Animasi transisi */
+    transition: 0.3s ease-in-out; /* Animasi transisi */
 }
 
 /* Header Saat Scroll */
@@ -184,6 +184,3 @@ body {
         border: .1rem solid rgba(0, 0, 0, 0.3);
         display: none;
     }
-.panduan{
-    position: relative;
-}
