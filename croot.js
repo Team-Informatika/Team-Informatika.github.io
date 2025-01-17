@@ -37,6 +37,7 @@ function pilihanMenu(){
 
 
 function renderDatadariJson(){
+    document.getElementById('layanan-list').innerHTML="";
     getJSON("https://t.if.co.id/json/layanan.json", "aja", "enak", responseFunctionLayanan);
 }
 
