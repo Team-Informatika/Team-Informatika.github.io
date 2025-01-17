@@ -40,18 +40,6 @@ body {
 }
 
 /* Footer Styles */
-.footer-menu {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #f8f9fa;
-  border-top: 1px solid #ddd;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-around;
-  padding: 0.5rem 0;
-}
-
 .menu-item {
   display: flex;
   flex-direction: column;
@@ -81,12 +69,6 @@ body {
     font-size: 1rem;
   }
 
-  .footer-menu {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-  }
-
   .menu-item {
     margin: 0.5rem 0;
   }
@@ -99,10 +81,6 @@ body {
 
   .about-body p {
     font-size: 0.9rem;
-  }
-
-  .footer-menu {
-    padding: 1rem;
   }
 
   .menu-item i {
