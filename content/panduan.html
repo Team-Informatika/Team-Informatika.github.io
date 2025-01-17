@@ -1,50 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bantuan</title>
-    <link rel="stylesheet">
-    <style>
-        /* styles.css */
+<section class="help-center">
+    <div class="search-box">
+      <input type="text" placeholder="Cari solusi atau artikel bantuan..." id="search">
+      <button>🔍 Cari</button>
+    </div>
 
-/* Reset dasar untuk tata letak */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <h1>Pusat Bantuan</h1>
+    <p>Temukan solusi untuk pertanyaan Anda di sini.</p>
 
-/* Tata letak dasar */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
+    <div class="help-categories">
+      <h2>Kategori Bantuan</h2>
+      <ul>
+        <li><a href="#">Akun dan Keamanan</a></li>
+        <li><a href="#">Pembayaran dan Tagihan</a></li>
+        <li><a href="#">Masalah Teknis</a></li>
+        <li><a href="#">Pengaturan dan Konfigurasi</a></li>
+        <li><a href="#">Lainnya</a></li>
+      </ul>
+    </div>
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-}
-
-nav ul {
+    <div class="popular-articles">
+      <h2>Artikel Populer</h2>
+      <ul>
+        <li><a href="#">Cara Mengubah Kata Sandi</a></li>
+        <li><a href="#">Pemulihan Akun Anda</a></li>
+        <li><a href="#">Panduan Pembayaran dan Refund</a></li>
+        <li><a href="#">Cara Mengatasi Masalah Login</a></li>
+      </ul>
+    </div>
+</section>
+<style>
+  /* panduan cuy */
+.nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
-nav ul li {
+.nav ul li {
   margin: 0 20px;
 }
 
-nav ul li a {
+.nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav ul li a:hover {
+.nav ul li a:hover {
   text-decoration: underline;
 }
 
@@ -108,47 +110,4 @@ h1, h2 {
 .help-categories ul li a:hover, .popular-articles ul li a:hover {
   text-decoration: underline;
 }
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-  margin-top: 30px;
-}
-
-    </style>
-</head>
-<body>
-    <section class="help-center">
-    <div class="search-box">
-      <input type="text" placeholder="Cari solusi atau artikel bantuan..." id="search">
-      <button>🔍 Cari</button>
-    </div>
-
-    <h1>Pusat Bantuan</h1>
-    <p>Temukan solusi untuk pertanyaan Anda di sini.</p>
-
-    <div class="help-categories">
-      <h2>Kategori Bantuan</h2>
-      <ul>
-        <li><a href="#">Akun dan Keamanan</a></li>
-        <li><a href="#">Pembayaran dan Tagihan</a></li>
-        <li><a href="#">Masalah Teknis</a></li>
-        <li><a href="#">Pengaturan dan Konfigurasi</a></li>
-        <li><a href="#">Lainnya</a></li>
-      </ul>
-    </div>
-
-    <div class="popular-articles">
-      <h2>Artikel Populer</h2>
-      <ul>
-        <li><a href="#">Cara Mengubah Kata Sandi</a></li>
-        <li><a href="#">Pemulihan Akun Anda</a></li>
-        <li><a href="#">Panduan Pembayaran dan Refund</a></li>
-        <li><a href="#">Cara Mengatasi Masalah Login</a></li>
-      </ul>
-    </div>
-  </section>
-</body>
-</html>
+</style>
