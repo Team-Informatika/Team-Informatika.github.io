@@ -1,6 +1,6 @@
 import {onClick,renderHTML} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
 import {getHash,onHashChange} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/url.js";
-
+import {getJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/api.js";
 
 onHashChange(pilihanMenu);
 
@@ -32,7 +32,13 @@ function pilihanMenu(){
     if (hashpath==="layanan"){
         console.log("layanan disini ya boss");
         renderHTML('content','content/layanan.html');
+        const target_url="https://t.if.co.id/json/layanan.json";
+        getJSON(target_url, "tokenkey", "tokenvalue", responseFunctionLayanan);
     }
+}
+
+function responseFunctionLayanan(response){//{ status, data: parsedResult }
+    console.log(response);
 }
 
 function ubahHeader(){
