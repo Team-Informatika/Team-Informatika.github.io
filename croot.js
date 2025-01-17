@@ -31,18 +31,24 @@ function pilihanMenu(){
     }
     if (hashpath==="layanan"){
         console.log("layanan disini ya boss");
-        renderHTML('content','content/layanan.html');
-        const target_url="https://t.if.co.id/json/layanan.json";
-        getJSON(target_url, "tokenkey", "tokenvalue", responseFunctionLayanan);
+        renderHTML('content','content/layanan.html',renderDatadariJson);
     }
 }
 
-function responseFunctionLayanan(response){//{ status, data: parsedResult }
-    console.log(response);
-    const data=response.data;
+
+function renderDatadariJson(){
+    getJSON("https://t.if.co.id/json/layanan.json", "aja", "enak", responseFunctionLayanan);
+}
+
+// cons response={ status : 200, data: datalayanan }
+
+function responseFunctionLayanan(data){//{ status, data: parsedResult }
+    console.log(data);
+    let apaja;
+    apaja=data.data;
     const container = document.getElementById('layanan-list');
     // Melakukan perulangan untuk setiap item dalam data
-    data.forEach(item => {
+    apaja.forEach(item => {
         // Membuat elemen div untuk setiap item
         const layananItem = document.createElement('div');
         layananItem.classList.add('layanan-item');
