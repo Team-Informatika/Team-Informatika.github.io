@@ -25,7 +25,7 @@ function pilihanMenu(){
     }
 
     if (hashpath==="panduan"){
-        console.log("ini team nya masuk cok");
+        console.log("wadidaw terkidaw-kidaw");
         renderHTML('content','content/panduan.html');
     }
     if (hashpath==="layanan"){
