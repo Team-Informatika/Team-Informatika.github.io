@@ -53,7 +53,7 @@ function responseFunctionMain(file) {
     let coba = file.data;
     const alamatElement = document.getElementById("alamat");
     const universitas = document.createElement('h2');
-    universitas.textContent = item.universitas;
+    universitas.textContent = coba.universitas;
 
 }
 
