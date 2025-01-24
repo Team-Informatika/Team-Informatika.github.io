@@ -48,21 +48,8 @@ function responseFunctionLayanan(data){//{ status, data: parsedResult }
     let apaja;
     apaja=data.data;
     const container = document.getElementById('layanan-list');
-    const template=`
-    <div class="layanan-item">
-                    <i class="icon">##ICON##</i>
-                    <h2>##HEADER##</h2>
-                    <p>##DESK##</p>
-                 </div>
-    `
-    let htmlkonten;
-    apaja.forEach(item => {
-        htmlkonten+=template.replaceAll("##ICON##",item.icon).replaceAll("##HEADER##",item.judul).replaceAll("##DESK##",item.deskripsi);
-    });
-    document.getElementById('layanan-list').innerHTML=htmlkonten;
-
     // Melakukan perulangan untuk setiap item dalam data
-    /* apaja.forEach(item => {
+    apaja.forEach(item => {
         // Membuat elemen div untuk setiap item
         const layananItem = document.createElement('div');
         layananItem.classList.add('layanan-item');
@@ -87,7 +74,7 @@ function responseFunctionLayanan(data){//{ status, data: parsedResult }
 
         // Menambahkan layananItem ke container
         container.appendChild(layananItem);
-    }); */
+    }); 
 
 }
 
