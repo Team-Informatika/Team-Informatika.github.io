@@ -86,7 +86,7 @@ function responseFunctionTeam(responseteam) {
     pnama.textContent = team.nama;
 
     const link = document.createElement("a").setAttribute("href",team.link);
-    console.log(isinya);
+    console.log(pnama);
     console.log(teamContainer);
     pnama.appendChild(link);
     // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
