@@ -40,9 +40,15 @@ function renderDatadariJson(){
 
     getJSON("https://t.if.co.id/json/layanan.json", "aja", "enak", responseFunctionLayanan);
     getJSON("https://t.if.co.id/json/team.json", "aja", "enak", responseFunctionTeam);
+    getJSON("https://t.if.co.id/json/main.json", "aja", "hehe", responseFunctionMain);
 }
 
 // cons response={ status : 200, data: datalayanan }
+function responseFunctionMain(file){
+    console.log(file);
+    let data=file.data;
+    const alamatContainer = document.getElementById("alamat");
+}
 function responseFunctionTeam(responseteam){
     console.log(responseteam);
     let teamberkelas;
