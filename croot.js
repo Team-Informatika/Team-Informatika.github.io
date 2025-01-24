@@ -83,7 +83,6 @@ function responseFunctionTeam(responseteam) {
 
     // Membuat elemen deskripsi
     const pnama = document.createElement("p");
-    pnama.textContent = team.nama;
 
     const link = document.createElement("a");
     link.textContent = team.nama;
