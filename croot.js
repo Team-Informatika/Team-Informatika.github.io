@@ -58,7 +58,7 @@ function responseFunctionMain(file) {
     // const alamatElement = document.getElementById("alamat");
     // const universitas = document.createElement('h2');
     // universitas.textContent = coba.universitas;
-    setInner("alamat", file.data.universitas);
+    setInner("alamat", file.data.Universitas);
 
 }
 
