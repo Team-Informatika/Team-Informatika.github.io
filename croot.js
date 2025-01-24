@@ -48,7 +48,7 @@ function responseFunctionTeam(responseteam){
     let teamberkelas;
     teamberkelas=responseteam.data;
     const container = document.getElementById("team");
-    apaja.forEach(team => {
+    teamberkelas.forEach(team => {
         // Membuat elemen div untuk setiap item
         const teamContainer = document.createElement('div');
         teamContainer.classList.add('team');
