@@ -1,23 +1,23 @@
-function responseFunctionTeam(responseteam) {
-    console.log(responseteam);
-    let teamMembers = responseteam.data;
-    const container = document.getElementById("team");
-    teamMembers.forEach(team => {
-        // Create a div element for each item
-        const teamContainer = document.createElement('div');
-        teamContainer.classList.add('team');
+import {onClick,renderHTML} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
+import {getHash,onHashChange} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/url.js";
+import {getJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/api.js";
 
-        // Create description element
-        const isinya = document.createElement('p');
-        isinya.textContent = team.isinya;
+onHashChange(pilihanMenu);
 
-        // Append description to teamContainer
-        teamContainer.appendChild(isinya);
+//document.getElementById("content").innerHTML="<h1>ini adalah isi dari konten</h1>";
+onClick("halo",ubahHeader);
 
-        // Append teamContainer to the main container
-        container.appendChild(teamContainer);
-    });
-}
+
+function pilihanMenu(){
+    console.log(getHash());
+    const hashpath=getHash();
+    if (hashpath==="main"){
+        console.log("ini kedetek main");
+        renderHTML('content','content/main.html');
+    }
+    if (hashpath==="about"){
+        console.log("ini kedetek about");
+        renderHTML('content','content/about.html');
     }
 
     if (hashpath==="team"){
@@ -47,7 +47,7 @@ function responseFunctionTeam(responseteam){
     console.log(responseteam);
     let teamberkelas;
     teamberkelas=responseteam.data;
-    const teamisi = document.getElementById("team");
+    const isiteam = document.getElementById("team");
     teamberkelas.forEach(team => {
         // Membuat elemen div untuk setiap item
         const teamContainer = document.createElement('div');
@@ -58,10 +58,10 @@ function responseFunctionTeam(responseteam){
         isinya.textContent = team.isinya;
 
         // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
-        teamContainer.appendChild(isinya);
+        teamContainer.appendChild(deskripsi);
 
         // Menambahkan layananItem ke container
-        teamisi.appendChild(team);
+        isiteam.appendChild(team);
     });
 }
 function responseFunctionLayanan(data){//{ status, data: parsedResult }
@@ -96,6 +96,7 @@ function responseFunctionLayanan(data){//{ status, data: parsedResult }
         // Menambahkan layananItem ke container
         container.appendChild(layananItem);
     }); 
+
 }
 
 function ubahHeader(){
