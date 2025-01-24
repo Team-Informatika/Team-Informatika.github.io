@@ -63,10 +63,18 @@ function renderDataTeamdariJson(){
 // cons response={ status : 200, data: datalayanan }
 function responseFunctionMain(file) {
     console.log(file);
+<<<<<<< HEAD
     let coba = file.data;
     const alamatElement = document.getElementById("alamat");
     const universitas = document.createElement('h2');
     universitas.textContent = item.universitas;
+=======
+    // let coba = file.data;
+    // const alamatElement = document.getElementById("alamat");
+    // const universitas = document.createElement('h2');
+    // universitas.textContent = coba.universitas;
+    setInner("alamat", file.data.Universitas);
+>>>>>>> a0845232ce557905d19d793d85d7561dd0dde2a7
 
 }
 
