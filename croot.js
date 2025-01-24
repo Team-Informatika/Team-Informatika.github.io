@@ -1,11 +1,5 @@
-import {
-  onClick,
-  renderHTML,
-} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
-import {
-  getHash,
-  onHashChange,
-} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/url.js";
+import { onClick, renderHTML } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
+import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/url.js";
 import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/api.js";
 
 onHashChange(pilihanMenu);
@@ -25,10 +19,10 @@ function pilihanMenu() {
     renderHTML("content", "content/about.html", renderDataAboutdariJson);
   }
 
-  if (hashpath === "team") {
-    console.log("ini team nya masuk cok");
-    renderHTML("content", "content/team.html");
-  }
+    if (hashpath === "team") {
+        console.log("ini team nya masuk cok");
+        renderHTML('content', 'content/team.html');
+    }
 
   if (hashpath === "panduan") {
     console.log("wadidaw terkidaw-kidaw");
@@ -41,18 +35,10 @@ function pilihanMenu() {
 }
 
 function renderDatadariJson() {
-  getJSON(
-    "https://t.if.co.id/json/layanan.json",
-    "aja",
-    "enak",
-    responseFunctionLayanan
-  );
-  getJSON(
-    "https://t.if.co.id/json/team.json",
-    "aja",
-    "enak",
-    responseFunctionTeam
-  );
+
+    getJSON("https://t.if.co.id/json/layanan.json", "aja", "enak", responseFunctionLayanan);
+    getJSON("https://t.if.co.id/json/team.json", "aja", "enak", responseFunctionTeam);
+    
 }
 
 function renderDataMaindariJson() {
@@ -70,13 +56,18 @@ function renderDataAboutdariJson() {
   "apa", responseFunctionAbout );
 }
 
+function renderDataTeamdariJson(){
+    getJSON("https://t.if.co.id/json/team.json", "aja", "enak", responseFunctionTeam);
+}
+
 // cons response={ status : 200, data: datalayanan }
 function responseFunctionMain(file) {
-  console.log(file);
-  let coba = file.data;
-  const alamatElement = document.getElementById("alamat");
-  const universitas = document.createElement("h2");
-  universitas.textContent = item.universitas;
+    console.log(file);
+    let coba = file.data;
+    const alamatElement = document.getElementById("alamat");
+    const universitas = document.createElement('h2');
+    universitas.textContent = item.universitas;
+
 }
 
 function responseFunctionTeam(responseteam) {
