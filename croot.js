@@ -58,7 +58,7 @@ function responseFunctionTeam(responseteam){
         isinya.textContent = team.isinya;
 
         // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
-        teamContainer.appendChild(deskripsi);
+        teamContainer.appendChild(isinya);
 
         // Menambahkan layananItem ke container
         isiteam.appendChild(team);
