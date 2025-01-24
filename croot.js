@@ -46,9 +46,9 @@ function renderDatadariJson(){
 // cons response={ status : 200, data: datalayanan }
 function responseFunctionMain(file){
     console.log(file);
-    let data=file.data;
-    const alamatContainer = document.getElementById("alamat");
+    const data = document.getElementById("alamat");
 }
+
 function responseFunctionTeam(responseteam){
     console.log(responseteam);
     let teamberkelas;
