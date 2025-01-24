@@ -51,7 +51,7 @@ function responseFunctionTeam(responseteam){
     teamberkelas.forEach(team => {
         // Membuat elemen div untuk setiap item
         const teamContainer = document.createElement('div');
-        teamContainer.classList.add('team');
+        teamContainer.classList.add('team-list');
 
         // Membuat elemen deskripsi
         const isinya = document.createElement('p');
