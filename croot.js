@@ -48,19 +48,21 @@ function responseFunctionTeam(responseteam){
     let teamberkelas;
     teamberkelas=responseteam.data;
     const container = document.getElementById("team");
-    const html =`
-    <div class="team-header">
-        <h1>Team Berkelas</h1>
-        <p>##NAMA##</p>
-        <p>##NPM##</p>
-        <p>##LINK##</p>
-    </div>`
+    apaja.forEach(team => {
+        // Membuat elemen div untuk setiap item
+        const team = document.createElement('div');
+        team.classList.add('team');
 
-    let htmlteam;
-    teamberkelas.forEach(team => {
-        htmlteam += html.replaceAll("##NAMA##",item.nama).replaceAll("##NPM##",item.NPM). replaceAll("##LINK##",item.link);
+        // Membuat elemen deskripsi
+        const isinya = document.createElement('p');
+        isinya.textContent = team.isinya;
+
+        // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
+        layananItem.appendChild(deskripsi);
+
+        // Menambahkan layananItem ke container
+        container.appendChild(team);
     });
-    document.getElementById('team').innerHTML=htmlteam;
 }
 function responseFunctionLayanan(data){//{ status, data: parsedResult }
     console.log(data);
