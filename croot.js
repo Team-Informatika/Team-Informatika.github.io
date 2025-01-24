@@ -1,58 +1,66 @@
-import {onClick,renderHTML} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
-import {getHash,onHashChange} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/url.js";
-import {getJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/api.js";
+import { onClick, renderHTML } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
+import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/url.js";
+import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/api.js";
 
 onHashChange(pilihanMenu);
 
 //document.getElementById("content").innerHTML="<h1>ini adalah isi dari konten</h1>";
-onClick("halo",ubahHeader);
+onClick("halo", ubahHeader);
 
 
-function pilihanMenu(){
+function pilihanMenu() {
     console.log(getHash());
-    const hashpath=getHash();
-    if (hashpath==="main"){
+    const hashpath = getHash();
+    if (hashpath === "main") {
         console.log("ini kedetek main");
-        renderHTML('content','content/main.html');
+        renderHTML('content', 'content/main.html', renderDataMaindariJson );
     }
-    if (hashpath==="about"){
+    if (hashpath === "about") {
         console.log("ini kedetek about");
-        renderHTML('content','content/about.html');
+        renderHTML('content', 'content/about.html');
     }
 
-    if (hashpath==="team"){
+    if (hashpath === "team") {
         console.log("ini team nya masuk cok");
-        renderHTML('content','content/team.html');
+        renderHTML('content', 'content/team.html');
     }
 
-    if (hashpath==="panduan"){
+    if (hashpath === "panduan") {
         console.log("wadidaw terkidaw-kidaw");
-        renderHTML('content','content/panduan.html');
+        renderHTML('content', 'content/panduan.html');
     }
-    if (hashpath==="layanan"){
+    if (hashpath === "layanan") {
         console.log("layanan disini ya boss");
-        renderHTML('content','content/layanan.html',renderDatadariJson);
+        renderHTML('content', 'content/layanan.html', renderDatadariJson);
     }
 }
 
 
-function renderDatadariJson(){
+function renderDatadariJson() {
 
     getJSON("https://t.if.co.id/json/layanan.json", "aja", "enak", responseFunctionLayanan);
     getJSON("https://t.if.co.id/json/team.json", "aja", "enak", responseFunctionTeam);
+    
+}
+
+function renderDataMaindariJson(){
     getJSON("https://t.if.co.id/json/main.json", "aja", "hehe", responseFunctionMain);
 }
 
 // cons response={ status : 200, data: datalayanan }
-function responseFunctionMain(file){
+function responseFunctionMain(file) {
     console.log(file);
-    const data = document.getElementById("alamat");
+    let coba = file.data;
+    const alamatElement = document.getElementById("alamat");
+    const universitas = document.createElement('h2');
+    universitas.textContent = item.universitas;
+
 }
 
-function responseFunctionTeam(responseteam){
+function responseFunctionTeam(responseteam) {
     console.log(responseteam);
     let teamberkelas;
-    teamberkelas=responseteam.data;
+    teamberkelas = responseteam.data;
     const isiteam = document.getElementById("team");
     teamberkelas.forEach(team => {
         // Membuat elemen div untuk setiap item
@@ -70,10 +78,10 @@ function responseFunctionTeam(responseteam){
         isiteam.appendChild(team);
     });
 }
-function responseFunctionLayanan(data){//{ status, data: parsedResult }
+function responseFunctionLayanan(data) {//{ status, data: parsedResult }
     console.log(data);
     let apaja;
-    apaja=data.data;
+    apaja = data.data;
     const container = document.getElementById('layanan-list');
     // Melakukan perulangan untuk setiap item dalam data
     apaja.forEach(item => {
@@ -101,12 +109,12 @@ function responseFunctionLayanan(data){//{ status, data: parsedResult }
 
         // Menambahkan layananItem ke container
         container.appendChild(layananItem);
-    }); 
+    });
 
 }
 
-function ubahHeader(){
-    document.getElementById("halo").innerHTML=getHash();
+function ubahHeader() {
+    document.getElementById("halo").innerHTML = getHash();
 }
 
 // renderHTML('content','content/main.html');
