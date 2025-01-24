@@ -39,10 +39,29 @@ function pilihanMenu(){
 function renderDatadariJson(){
 
     getJSON("https://t.if.co.id/json/layanan.json", "aja", "enak", responseFunctionLayanan);
+    getJSON("https://t.if.co.id/json/team.json", "aja", "enak", responseFunctionTeam);
 }
 
 // cons response={ status : 200, data: datalayanan }
+function responseFunctionTeam(responseteam){
+    console.log(responseteam);
+    let teamberkelas;
+    teamberkelas=responseteam.data;
+    const container = document.getElementById("team");
+    const html =`
+    <div class="team-header">
+        <h1>Team Berkelas</h1>
+        <p>##NAMA##</p>
+        <p>##NPM##</p>
+        <p>##LINK##</p>
+    </div>`
 
+    let htmlteam;
+    teamberkelas.forEach(team => {
+        htmlteam += html.replaceAll("##NAMA##",item.nama).replaceAll("##NPM##",item.NPM). replaceAll("##LINK##",item.link);
+    });
+    document.getElementById('team').innerHTML=htmlteam;
+}
 function responseFunctionLayanan(data){//{ status, data: parsedResult }
     console.log(data);
     let apaja;
