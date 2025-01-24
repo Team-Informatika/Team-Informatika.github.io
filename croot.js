@@ -50,8 +50,8 @@ function responseFunctionTeam(responseteam){
     const container = document.getElementById("team");
     apaja.forEach(team => {
         // Membuat elemen div untuk setiap item
-        const team = document.createElement('div');
-        team.classList.add('team');
+        const teamContainer = document.createElement('div');
+        teamContainer.classList.add('team');
 
         // Membuat elemen deskripsi
         const isinya = document.createElement('p');
