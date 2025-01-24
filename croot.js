@@ -82,15 +82,20 @@ function responseFunctionTeam(responseteam) {
     teamContainer.classList.add("team-list");
 
     // Membuat elemen deskripsi
-    const isinya = document.createElement("p");
-    isinya.textContent = team.nama;
+    const pnama = document.createElement("p");
+    pnama.textContent = team.nama;
+
+    const link = document.createElement("a").setAttribute("href",team.link);
     console.log(isinya);
     console.log(teamContainer);
+    pnama.appendChild(link);
     // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
-    teamContainer.appendChild(isinya);
+    teamContainer.appendChild(pnama);
 
     // Menambahkan layananItem ke container
     isiteam.appendChild(teamContainer);
+
+
   });
 }
 
