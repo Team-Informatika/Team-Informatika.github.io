@@ -21,7 +21,7 @@ function pilihanMenu() {
 
     if (hashpath === "team") {
         console.log("ini team nya masuk cok");
-        renderHTML('content', 'content/team.html');
+        renderHTML('content', 'content/team.html', renderDataTeamdariJson);
     }
 
   if (hashpath === "panduan") {
@@ -87,11 +87,12 @@ function responseFunctionTeam(responseteam) {
 
     // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
     teamContainer.appendChild(isinya);
-    
+
     // Menambahkan layananItem ke container
     isiteam.appendChild(teamContainer);
   });
 }
+
 function responseFunctionLayanan(data) {
   //{ status, data: parsedResult }
   console.log(data);
