@@ -83,7 +83,7 @@ function responseFunctionTeam(responseteam) {
 
     // Membuat elemen deskripsi
     const isinya = document.createElement("p");
-    isinya.textContent = team.isinya;
+    isinya.textContent = team.nama;
     console.log(isinya);
     console.log(teamContainer);
     // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
