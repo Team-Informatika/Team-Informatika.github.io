@@ -85,7 +85,8 @@ function responseFunctionTeam(responseteam) {
     const pnama = document.createElement("p");
     pnama.textContent = team.nama;
 
-    const link = document.createElement("a").setAttribute("href",team.link);
+    const link = document.createElement("a");
+    link.href = team.link;
     console.log(pnama);
     console.log(teamContainer);
     pnama.appendChild(link);
