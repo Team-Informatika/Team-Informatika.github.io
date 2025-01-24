@@ -45,7 +45,6 @@ function renderDatadariJson() {
 
 function renderDataMaindariJson(){
     getJSON("https://t.if.co.id/json/main.json", "aja", "hehe", responseFunctionMain);
-    getJSON("https://t.if.co.id/json/about.json", "aja", "enak", responseFunctionAbout);
 }
 
 // cons response={ status : 200, data: datalayanan }
