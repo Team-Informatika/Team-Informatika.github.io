@@ -45,6 +45,7 @@ function renderDatadariJson() {
 
 function renderDataMaindariJson(){
     getJSON("https://t.if.co.id/json/main.json", "aja", "hehe", responseFunctionMain);
+    getJSON("https://t.if.co.id/json/about.json", "aja", "enak", responseFunctionAbout);
 }
 
 // cons response={ status : 200, data: datalayanan }
@@ -111,6 +112,23 @@ function responseFunctionLayanan(data) {//{ status, data: parsedResult }
         container.appendChild(layananItem);
     });
 
+}
+function responseFunctionAbout(about){
+    console.log(about);
+    let tentang = about.data;
+    const container = document.getElementById('about')
+    tentang.forEach(desk => {
+        const aboutus = document.createElement('div');
+        aboutus.classList.add('about-us')
+
+        const aboutjudul = document.createElement('h1');
+        aboutjudul.textContent = about.judul;
+        
+        const aboutdeskripsi = document.createElement('p');
+        aboutdeskripsi.textContent = about.deskripsi;
+
+        container.appendChild(about);
+    })
 }
 
 function ubahHeader() {
