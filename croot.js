@@ -58,7 +58,7 @@ function responseFunctionTeam(responseteam){
         isinya.textContent = team.isinya;
 
         // Menambahkan icon, judul, dan deskripsi ke dalam layananItem
-        teamberkelas.appendChild(isinya);
+        teamContainer.appendChild(isinya);
 
         // Menambahkan layananItem ke container
         teamisi.appendChild(team);
@@ -96,7 +96,6 @@ function responseFunctionLayanan(data){//{ status, data: parsedResult }
         // Menambahkan layananItem ke container
         container.appendChild(layananItem);
     }); 
-
 }
 
 function ubahHeader(){
