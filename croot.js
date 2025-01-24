@@ -22,7 +22,7 @@ function pilihanMenu() {
 
     if (hashpath === "team") {
         console.log("ini team nya masuk cok");
-        renderHTML('content', 'content/team.html');
+        renderHTML('content', 'content/team.html', renderDataTeamdariJson);
     }
 
     if (hashpath === "panduan") {
@@ -39,12 +39,16 @@ function pilihanMenu() {
 function renderDatadariJson() {
 
     getJSON("https://t.if.co.id/json/layanan.json", "aja", "enak", responseFunctionLayanan);
-    getJSON("https://t.if.co.id/json/team.json", "aja", "enak", responseFunctionTeam);
+    
     
 }
 
 function renderDataMaindariJson(){
     getJSON("https://t.if.co.id/json/main.json", "aja", "hehe", responseFunctionMain);
+}
+
+function renderDataTeamdariJson(){
+    getJSON("https://t.if.co.id/json/team.json", "aja", "enak", responseFunctionTeam);
 }
 
 // cons response={ status : 200, data: datalayanan }
