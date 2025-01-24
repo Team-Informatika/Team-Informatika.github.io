@@ -1,4 +1,4 @@
-import { onClick, renderHTML } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
+import { onClick, renderHTML, setInner} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
 import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/url.js";
 import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/api.js";
 
@@ -54,10 +54,11 @@ function renderDataTeamdariJson(){
 // cons response={ status : 200, data: datalayanan }
 function responseFunctionMain(file) {
     console.log(file);
-    let coba = file.data;
-    const alamatElement = document.getElementById("alamat");
-    const universitas = document.createElement('h2');
-    universitas.textContent = coba.universitas;
+    // let coba = file.data;
+    // const alamatElement = document.getElementById("alamat");
+    // const universitas = document.createElement('h2');
+    // universitas.textContent = coba.universitas;
+    setInner("alamat", file.data.universitas);
 
 }
 
